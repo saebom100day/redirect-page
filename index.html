@@ -9,11 +9,10 @@
     <meta property="og:url" content="https://pf.kakao.com/_kjMzn/chat">
     <title>Redirecting...</title>
     <script>
-        // 기본 리다이렉트
-        window.location.href = "https://pf.kakao.com/_kjMzn/chat";
-
-        // 캐시 방지 리다이렉트 (nocache 파라미터 추가)
-        window.location.href = "https://pf.kakao.com/_kjMzn/chat?nocache=" + new Date().getTime();
+        // 리다이렉트를 2초 지연하여 Open Graph 메타데이터를 먼저 읽도록 유도
+        setTimeout(function() {
+            window.location.href = "https://pf.kakao.com/_kjMzn/chat?nocache=" + new Date().getTime();
+        }, 2000); // 2000ms = 2초
     </script>
 </head>
 <body>
